@@ -90,9 +90,9 @@ export class ConnectionManager {
                 username: _es.user,
                 password: _es.pass
             },
-            ssl: _es.protocol === 'https' ? {
+            ssl: {
                 rejectUnauthorized: false
-            } : undefined
+            } 
         });
     }
 
@@ -115,9 +115,9 @@ export class ConnectionManager {
                             password: _es.pass
                         },
                         pingTimeout: 100,
-                        ssl: _es.protocol === 'https' ? {
+                        ssl: {
                             rejectUnauthorized: false
-                        } : undefined
+                        }
                     });
                 }
             }
